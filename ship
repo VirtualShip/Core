@@ -20,5 +20,6 @@ then
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
+fi
 
 
