@@ -9,7 +9,7 @@ a52dec_install () {
 	sleep 2
 	unzip a52dec.zip
 	rm -r -d __MACOSX
-	rm a52dec.zip
+	rm a52dec.zi
 	echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
 	sleep 2
 	./test
