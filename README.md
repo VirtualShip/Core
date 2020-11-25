@@ -48,7 +48,7 @@ PLEASE NOTE: THE ABOVE POINTS ARE ONLY GUARANTEED WHEN INSTALLING 'STABLE' PRODU
 Ready to install VirtualShip? Follow the directions below if you are experienced, or check out the installation guide on the wiki.
 ### On Mac OS
 #### Package
-For Version 0.1.0 (alpha), we have released a package, as well as source code. _This is the preferred method for downloading VirtualShip_. It is the easiest way to get VirtualShip up and running on your computer. Go to https://github.com/VirtualShip/Core/releases/tag/v0.1.0-alpha and download the package named "VirtualShip.pkg". Once it is downloaded, click on it. A installation window should pop up, follow the directions, and you should be done. Also remember to install the following dependencies:
+For Version 0.1.0 (alpha), we have released a package, as well as source code. _This is the preferred method for downloading VirtualShip_. It is the easiest way to get VirtualShip up and running on your computer. Go to https://github.com/VirtualShip/Core/releases/tag/v0.1.0-alpha and download the package named "VirtualShip.pkg". Once it is downloaded, click on it. It will say that we are an unidentified developer (this only means we don't pay Apple, a trillion dollar company, $99 a year). Override this by going into System Preferences, then Securiy & Privacy. A installation window should pop up, follow the directions, and you should be done. Also remember to install the following dependencies:
 * python 3
 * pip
 * ssl 
