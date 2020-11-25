@@ -1,6 +1,7 @@
 #!/bin/bash
 source /usr/local/Shipper/stock/a52dec_install.sh
 source /usr/local/Shipper/maintain.sh
+source /usr/local/Shipper/refurbish.sh
 if [ "$1" == "order" ];
 then
 	if [ "$2" == "a52dec" ];
@@ -15,11 +16,12 @@ then
 	if [ "$2" == "ship" ];
 	then
 		maintain
+	elif [ "$2" == "a52dec" ];
+	then
+		a52dec_update
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		fi
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
-
-
