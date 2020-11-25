@@ -53,6 +53,7 @@ First, we, of course, have to install all the dependencies for VirtualShip. At t
 * pip
 * ssl
 * gdown
+* git
 
 #### Create Folders
 Navigate or cd to the ```/usr/local``` directory, and add the ```Warehouse```, ```Garage```, and ```Shipper``` folders. In terminal, run the following:
