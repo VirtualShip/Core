@@ -59,9 +59,15 @@ First, we, of course, have to install all the dependencies for VirtualShip. At t
 Navigate or cd to the ```/usr/local``` directory, and add the ```Warehouse```, ```Garage```, and ```Shipper``` folders. In terminal, run the following:
 ```
 cd /usr/local
-mkdir Warehouse
-mkdir Garage
-mkdir Shipper
+sudo mkdir Warehouse
+sudo mkdir Garage
+sudo mkdir Shipper
+```
+Then, you will need to update permissions:
+```
+sudo chmod -R 777 Warehouse
+sudo chmod -R 777 Garage
+sudo chmod -R 777 Shipper
 ```
 #### Edit PATH
 After you create all the folders, you must add these to the PATH variable. Use the following command to do so:
