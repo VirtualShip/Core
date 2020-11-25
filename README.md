@@ -47,7 +47,11 @@ PLEASE NOTE: THE ABOVE POINTS ARE ONLY GUARANTEED WHEN INSTALLING 'STABLE' PRODU
 ## Installation Guide
 Ready to install VirtualShip? Follow the directions below if you are experienced, or check out the installation guide on the wiki.
 ### On Mac OS
-#### Dependencies
+#### Package
+For Version 0.1.0 (alpha), we have released a package, as well as source code. _This is the preferred method for downloading VirtualShip_. It is the easiest way to get VirtualShip up and running on your computer. Go to https://github.com/VirtualShip/Core/releases/tag/v0.1.0-alpha and download the package named "VirtualShip.pkg". Once it is downloaded, click on it. A installation window should pop up, follow the directions, and you should be done.
+#### Manual
+You can also manually install VirtualShip, if the above method does not work for you. Go to https://github.com/VirtualShip/Core/releases/tag/v0.1.0-alpha, and download the zip or tar gz file called Source Code. Then, follow the directions below.
+##### Dependencies
 First, we, of course, have to install all the dependencies for VirtualShip. At the time of this writing, VirtualShip is still in alpha mode, so these packages are not yet supported. Below is a quick list of the dependencies you should install:
 * python 3
 * pip
@@ -55,7 +59,7 @@ First, we, of course, have to install all the dependencies for VirtualShip. At t
 * gdown
 * git
 
-#### Create Folders
+##### Create Folders
 Navigate or cd to the ```/usr/local``` directory, and add the ```Warehouse```, ```Garage```, and ```Shipper``` folders. In terminal, run the following:
 ```
 cd /usr/local
@@ -69,7 +73,7 @@ sudo chmod -R 777 Warehouse
 sudo chmod -R 777 Garage
 sudo chmod -R 777 Shipper
 ```
-#### Edit PATH
+##### Edit PATH
 After you create all the folders, you must add these to the PATH variable. Use the following command to do so:
 ```
 export PATH="/usr/local/Warehouse:/usr/local/Warehouse/bin:/usr/local/Garage:/usr/local/Garage/bin:/usr/local/Shipper:$PATH"
@@ -79,7 +83,7 @@ Then, you could check if it worked (it should), by running ```echo $PATH```. You
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/Warehouse:/usr/local/Warehouse/bin:/usr/local/Garage:/usr/local/Garage/bin:/usr/local/Shipper:/usr/local/:/Library/Apple/usr/bin
 ```
 
-#### Install code
+##### Install code
 Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal:
 ```
 cd /usr/local
