@@ -4,7 +4,7 @@ a52dec_install () {
 	sleep 2
 	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
 	sleep 2
-	gdown https://drive.google.com/uc?id=1QwAr-b4cd8hhgMJh92HVDck4z-axV7-P
+	gdown https://drive.google.com/uc?id=1zQ4AXFC9Gcz0eqIuWLrkzmKQXubkeKhm
 	echo -e "\033[33;1;4m📦 Packaging components of order... \033[0m"
 	sleep 2
 	unzip a52dec.zip
@@ -15,3 +15,4 @@ a52dec_install () {
 	./test
 	rm test
 }
+
