@@ -2,6 +2,7 @@
 source /usr/local/Shipper/stock/a52dec_install.sh
 source /usr/local/Shipper/maintain.sh
 source /usr/local/Shipper/refurbish.sh
+source /usr/local/Shipper/return.sh
 if [ "$1" == "order" ];
 then
 	if [ "$2" == "a52dec" ];
@@ -22,6 +23,16 @@ then
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		fi
+elif [ "$1" == "return" ];
+then
+	if [ "$2" == "a52dec" ];
+	then
+		un_a52dec
+	else
+		echo "Error: product not in stock"
+	fi
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
+
+
