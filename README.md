@@ -89,20 +89,6 @@ Then, you could check if it worked (it should), by running ```echo $PATH```. You
 ```
 
 ##### Install code
-Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal:
-```
-cd /usr/local
-sudo git clone --mirror https://github.com/VirtualShip/Core
-sudo mv Core.git Shipper/.git
-cd Shipper/.git
-sudo nano config
-```
-Here, you want to remove the line named 'bare=true' from the config file. Once you do that, exit ```nano``` and run the following:
-```
-cd ..
-sudo git checkout
-sudo chmod +x ship
-```
-And you're done! Now that you've installed VirtualShip successfully, check out the wiki for more information.
+Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Shipper directory, run ```sudo chmod +x ship```, and you're done. For a more detailed installation guide, check out the wiki.
 
-
+And you're done! Now that you have installed VirtualShip on your computer, go to the wiki to learn more!
