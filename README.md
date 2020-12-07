@@ -50,7 +50,7 @@ Ready to install VirtualShip? Follow the directions below if you are experienced
 #### Script
 Script install is not yet supported. See our News page in our wiki for more information.
 #### Manual
-You can also manually install VirtualShip, if the above method does not work for you. Go to https://github.com/VirtualShip/Core/releases/tag/v0.1.0-alpha, and download the zip or tar gz file called Source Code. Then, follow the directions below.
+You can also manually install VirtualShip, if the above method does not work for you. Go to https://github.com/VirtualShip/Core/releases/tag/v0.2.0-alpha, and download the zip or tar gz file called Source Code. Then, follow the directions below.
 ##### Dependencies
 First, we, of course, have to install all the dependencies for VirtualShip. At the time of this writing, VirtualShip is still in alpha mode, so these packages are not yet supported. Below is a quick list of the dependencies you should install:
 * python 3
