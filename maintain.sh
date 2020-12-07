@@ -21,10 +21,10 @@ maintain () {
 	sleep 1
 	
 	cd Core
-	mv /usr/local/Warehouse/Core/README.md /usr/local/Shipper/README.md
-	mv /usr/local/Warehouse/Core/ship /usr/local/Shipper/ship
-	mv /usr/local/Warehouse/Core/stock /usr/local/Shipper/stock
-	mv /usr/local/Warehouse/Core/LICENSE /usr/local/Shipper/LICENSE
+	mv /usr/local/Warehouse/Core/README.md /usr/local/Warehouse/README.md
+	mv /usr/local/Warehouse/Core/ship /usr/local/Warehouse/ship
+	mv /usr/local/Warehouse/Core/stock /usr/local/Warehouse/stock
+	mv /usr/local/Warehouse/Core/LICENSE /usr/local/Warehouse/LICENSE
 	rm -rf maintain.sh
 	rm -rf refurbish .sh
 	rm -rf return.sh
