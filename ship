@@ -1,6 +1,7 @@
 #!/bin/bash
 source /usr/local/Warehouse/stock/a52dec_install.sh
 source /usr/local/Warehouse/stock/aalib_install.sh
+source /usr/local/Warehouse/stock/aardvark_install.sh
 source /usr/local/Warehouse/maintain.sh
 source /usr/local/Warehouse/refurbish.sh
 source /usr/local/Warehouse/return.sh
@@ -13,6 +14,9 @@ then
 	elif [ "$2" == "aalib" ];
 	then
 		aalib_install
+	elif [ "$2" == "aardvark_shell_utils" ];
+	then
+		aardvark_install
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		echo "Try refurbishing (maintaining, updating) VirtualShip."
@@ -29,6 +33,9 @@ then
 	elif [ "$2" == "aalib" ];
 	then
 		aalib_update
+	elif [ "$2" == "aardvark_shell_utils" ];
+	then
+		aardvark_update
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		fi
@@ -40,6 +47,9 @@ then
 	elif [ "$2" == "aalib" ];
 	then
 		un_aalib
+	elif [ "$2" == "aardvark_shell_utils" ];
+	then
+		un_aardvark
 	else
 		echo "Error: product not in stock"
 	fi
