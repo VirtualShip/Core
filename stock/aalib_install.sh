@@ -4,7 +4,7 @@ aalib_install () {
 	sleep 2
 	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
 	sleep 2
-	gdown https://drive.google.com/uc?id=1IOKoh-n4vTgdxktPBLl7oP0djUSleK7t
+	gdown https://drive.google.com/uc?id=1OapO-zxh-9Zyvu4nhjyNXJ2HsgoGaWh1
 	echo -e "\033[33;1;4m📦 Packaging components of order... \033[0m"
 	sleep 2
 	unzip aalib.zip
