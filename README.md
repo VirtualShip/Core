@@ -85,3 +85,24 @@ Then, you could check if it worked (it should), by running ```echo $PATH```. You
 Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x ship```, and you're done. For a more detailed installation guide, check out the wiki.
 
 And you're done! Now that you have installed VirtualShip on your computer, go to the wiki to learn more!
+
+## Uninstalling VirtualShip
+### Removing Code
+Before you install, you must understand that uninstalling is very, very easy! The reason for this is because VirtualShip is designed only to put products and code in two folders: the Warehouse and the Garage. To uninstall VirtualShip, simply run the following code in terminal:
+```
+rm -r -d /usr/local/Garage
+rm -r -d /usr/local/Warehouse
+```
+If you want to, you can check ```ship --version``` to see if VirtualShip is still there. It should be gone.
+### Removing PATH
+After removing the folders, be sure to modify the PATH variable so it won't include two missing folders. To do this, edit your ```/etc/paths``` file:
+```
+sudo nano /etc/paths
+```
+Remove the lines that contain the following:
+```
+/usr/local/Garage
+/usr/local/Garage/bin
+/usr/local/Warehouse
+```
+Write out (Ctrl+O) and exit (Ctrl+X). Quit the terminal and reopen it. Check that it has removed it successfully by entering ```echo $PATH```. And you're done!
