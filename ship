@@ -26,6 +26,9 @@ then
 	elif [ "$2" == "a52dec" ];
 	then
 		a52dec_update
+	elif [ "$2" == "aalib" ];
+	then
+		aalib_update
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		fi
@@ -34,13 +37,12 @@ then
 	if [ "$2" == "a52dec" ];
 	then
 		un_a52dec
+	elif [ "$2" == "aalib" ];
+	then
+		un_aalib
 	else
 		echo "Error: product not in stock"
 	fi
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
-
-
-
-
