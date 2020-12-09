@@ -1,4 +1,4 @@
-52dec_install () {
+a52dec_install () {
 	cd /usr/local/Garage
 	echo -e "\033[34;1;4m🖥️  Processing order: a52dec \033[0m"
 	sleep 2
