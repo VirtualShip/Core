@@ -36,6 +36,7 @@ then
 	if [ "$2" == "ship" ];
 	then
 		maintain
+		rm /usr/local/Warehouse/maintain.sh
 	elif [ "$2" == "a52dec" ];
 	then
 		a52dec_update
