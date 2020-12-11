@@ -1,10 +1,19 @@
 #!/bin/bash
-source /usr/local/Warehouse/stock/a52dec_install.sh
-source /usr/local/Warehouse/stock/aalib_install.sh
-source /usr/local/Warehouse/stock/aardvark_install.sh
-source /usr/local/Warehouse/maintain.sh
-source /usr/local/Warehouse/refurbish.sh
-source /usr/local/Warehouse/return.sh
+for FILE in /usr/local/Warehouse/stock/*; 
+do
+	source $FILE
+done
+
+for FILE in /usr/local/Warehouse/refurbish/*;
+do
+	source $FILE
+done
+
+for FILE in /usr/local/Warehouse/return/*;
+do
+	source $FILE
+done
+
 if [ "$1" == "order" ];
 then
 	if [ "$2" == "a52dec" ];
