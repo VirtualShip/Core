@@ -36,7 +36,10 @@ then
 	if [ "$2" == "ship" ];
 	then
 		maintain
-		rm /usr/local/Warehouse/maintain.sh
+		rm -rf /usr/local/Warehouse/maintain.sh
+		rm -rf /usr/local/Warehouse/requirements.txt
+		rm -rf /usr/local/Warehouse/return.sh
+		rm -rf /usr/local/Warehouse/refurbish.sh
 	elif [ "$2" == "a52dec" ];
 	then
 		a52dec_update
