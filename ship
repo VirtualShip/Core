@@ -26,6 +26,9 @@ then
 	elif [ "$2" == "aardvark_shell_utils" ];
 	then
 		aardvark_install
+	elif [ "$2" == "abcm2ps" ];
+	then
+		abcm2ps_install
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		echo "Try refurbishing (maintaining, updating) VirtualShip."
@@ -49,6 +52,9 @@ then
 	elif [ "$2" == "aardvark_shell_utils" ];
 	then
 		aardvark_update
+	elif [ "$2" == "abcm2ps" ];
+	then
+		abcm2ps_update
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		fi
@@ -63,6 +69,9 @@ then
 	elif [ "$2" == "aardvark_shell_utils" ];
 	then
 		un_aardvark
+	elif [ "$2" == "abcm2ps" ];
+	then
+		un_abcm2ps
 	else
 		echo "Error: product not in stock"
 	fi
