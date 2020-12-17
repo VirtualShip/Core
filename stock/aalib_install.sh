@@ -15,4 +15,3 @@ aalib_install () {
 	./test
 	rm test
 }
-
