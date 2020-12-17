@@ -20,5 +20,5 @@ un_abcm2ps () {
 	rm -rf /usr/local/Garage/share/man/man1/abcm2ps.1
 	rm -rf /usr/local/Garage/abcm2ps_version
 
-	echo -e "\033[92;1;4m🏭 Package arrived at store! aardvark_shell_utils successfully returned. \033[0m"
+	echo -e "\033[92;1;4m🏭 Package arrived at store! abcm2ps successfully returned. \033[0m"
 }
