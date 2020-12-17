@@ -48,7 +48,19 @@ PLEASE NOTE: THE ABOVE POINTS ARE ONLY GUARANTEED WHEN INSTALLING 'STABLE' PRODU
 Ready to install VirtualShip? Follow the directions below if you are experienced, or check out the installation guide on the wiki.
 ### On Mac OS
 #### Script
-Script install is not yet supported. See our News page in our wiki for more information.
+Script install for VirtualShip is now supported. It is still in its alpha stages, so if this method doesn't work, try manualling installing it. Here is an overview of what the script does:
+* Installs HomeBrew
+* Installs Python (python 3, pip, and ssl)
+* Installs Gdown
+* Installs Git
+* Uninstalls HomeBrew
+* Installs VirtualShip
+
+You may notice that we make use of HomeBrew, another package installer, to install these dependencies. In the future, we may release a major release to remove the python and gdown dependencies (see News for more info). Alright, so simply type the following code into the terminal to install:
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Core/install/install.sh)"
+```
+And you're done!
 #### Manual
 You can also manually install VirtualShip, if the above method does not work for you. Go to https://github.com/VirtualShip/Core/releases/tag/v0.2.0-alpha, and download the zip or tar gz file called Source Code. Then, follow the directions below.
 ##### Dependencies
