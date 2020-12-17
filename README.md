@@ -3,7 +3,7 @@ The code on this repository is what is actually installed on your Mac OS system.
 
 This fills the gap as a hassle-free and fast alternative to Homebrew, and as the package manager that Apple (and Microsoft) happen to not install on their operating systems.
 
-VirtualShip creates two folders, inside of which it will operate. The first folder the Warehouse (located at ```/usr/local/Warehouse```) will be the place where the code in this repository is stored. The second folder is the Garage (located at ```/usr/local/Garage```), where the installed packages will be put. Note: _VirtualShip will operate only within the Warehouse and Garage environments.
+VirtualShip creates two folders, inside of which it will operate. The first folder the Warehouse (located at ```/usr/local/Warehouse```) will be the place where the code in this repository is stored. The second folder is the Garage (located at ```/usr/local/Garage```), where the installed packages will be put. Note: _VirtualShip will operate only within the Warehouse and Garage environments_.
 
 VirtualShip is currently being actively developed. New downloads will be added to the Products repository, and the stocks to the Stocks repository. All released code will be labeled (in a commit) as either 'alpha', 'beta', or 'stable'.
 
