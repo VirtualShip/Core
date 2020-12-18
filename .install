@@ -5,10 +5,6 @@ wait_for_user() {
   sleep 2
   echo -e "\033[33;1;4mThis script will install VirtualShip on your computer. Enter 'No' to abort or any other key to continue. \033[0m"
   read continue
-  if [ "$continue" == "No" ];
-  then
-    abort
-  fi
 }
 
 install_ship() {
