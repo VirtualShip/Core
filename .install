@@ -1,14 +1,13 @@
 #!/bin/bash
 
 wait_for_user() {
-  local c
   echo "Please note that you will need sudo access to install VirtualShip."
   sleep 2
-  echo -e "\033[33;1;4mThis script will install VirtualShip on your computer. Press RETURN to continue or any other key to abort. \033[0m"
-  getc c
-  if ! [[ "$c" == $'\r' || "$c" == $'\n' ]]; then
+  echo -e "\033[33;1;4mThis script will install VirtualShip on your computer. Enter 'No' to abort or any other key to continue. \033[0m"
+  read continue
+  if [ "$continue" == "No" ];
+  then
     exit 1
-  fi
 }
 
 install_ship() {
