@@ -15,3 +15,4 @@ abcmidi_install () {
         ./test
         rm test
 }
+
