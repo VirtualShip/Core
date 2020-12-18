@@ -1,0 +1,35 @@
+#!/bin/bash
+
+wait_for_user() {
+  local c
+  echo "Please note that you will need sudo access to install VirtualShip."
+  sleep 2
+  echo -e "\033[33;1;4mThis script will install VirtualShip on your computer. Press RETURN to continue or any other key to abort. \033[0m"
+  getc c
+  if ! [[ "$c" == $'\r' || "$c" == $'\n' ]]; then
+    exit 1
+  fi
+}
+
+install_ship() {
+  cd /usr/local
+  sudo mkdir Warehouse
+  sudo mkdir Garage
+  sudo chmod -R 777 Warehouse
+  sudo chmod -R 777 Garage
+  export PATH="/usr/local/Warehouse:/usr/local/Garage:/usr/local/Garage/bin:$PATH"
+  sudo git clone https://github.com/VirtualShip/Core
+  sudo mv Core /usr/local/Warehouse
+  cd /usr/local/Warehouse
+  sudo mv /usr/local/Warehouse/Core/* /usr/local/Warehouse
+  sudo rm -rf -d Core
+  sudo chmod +x ship
+  sudo chmod +x gdrived
+}
+
+wait_for_user
+git --version
+install_ship
+echo -e "\033[92;1;4mVirtualShip successfully installed! \033[0m"
+
+
