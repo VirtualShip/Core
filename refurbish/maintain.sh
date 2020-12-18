@@ -8,6 +8,7 @@ maintain () {
 	sleep 1
 	
 	rm -rf ship
+	rm -rf gdrived
 	rm -rf -d stock
 	rm -rf -d return
 	rm -rf README.md
@@ -30,6 +31,7 @@ maintain () {
 	echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
 	sleep 2
 
+	chmod +x ship
 	chmod +x ship
 	
 	echo -e "\033[92;1;4m🏡 Package received! VirtualShip succesfully refurbished. \033[0m"
