@@ -12,8 +12,8 @@ un_abcm2ps () {
 		echo -e "\033[91;1;4mError: abcm2ps not installed. Try running ship order abcm2ps... \033[0m"
 		exit
 	fi
-
-	rm -rf -d /usr/local/Garage/abcm2ps-8.14.11
+	version=`cat abcm2ps_version`
+	rm -rf -d "/usr/local/Garage/abcm2ps-$version"
 	rm -rf /usr/local/Garage/bin/abcm2ps
 	rm -rf /usr/local/Garage/share/abcm2ps
 	rm -rf /usr/local/Garage/share/doc/abcm2ps
