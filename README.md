@@ -49,27 +49,22 @@ Ready to install VirtualShip? Follow the directions below if you are experienced
 ### On Mac OS
 #### Script
 Script install for VirtualShip is now supported. It is still in its alpha stages, so if this method doesn't work, try manualling installing it. Here is an overview of what the script does:
-* Installs HomeBrew
-* Installs Python (python 3, pip, and ssl)
-* Installs Gdown
-* Installs Git
-* Uninstalls HomeBrew
+* Prompts you to install VirtualShip
+* Installs dependencies
 * Installs VirtualShip
 
 You may notice that we make use of HomeBrew, another package installer, to install these dependencies. In the future, we may release a major release to remove the python and gdown dependencies (see News for more info). Alright, so simply type the following code into the terminal to install:
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Core/install/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Core/main/.install)"
 ```
 And you're done!
 #### Manual
 You can also manually install VirtualShip, if the above method does not work for you. Go to https://github.com/VirtualShip/Core/releases/tag/v0.2.0-alpha, and download the zip or tar gz file called Source Code. Then, follow the directions below.
 ##### Dependencies
 First, we, of course, have to install all the dependencies for VirtualShip. At the time of this writing, VirtualShip is still in alpha mode, so these packages are not yet supported. Below is a quick list of the dependencies you should install:
-* python 3
-* pip
-* ssl
-* gdown
+* curl
 * git
+As of the current release, python3 and gdown dependencies have been removed. Curl comes preinstalled with Mac OS, and git can be installed either by using git for the first time, or by installing Xcode Command Line Tools.
 
 ##### Create Folders
 Navigate or cd to the ```/usr/local``` directory, and add the ```Warehouse``` and ```Garage``` folders. In terminal, run the following:
@@ -94,7 +89,7 @@ Then, you could check if it worked (it should), by running ```echo $PATH```. You
 ```
 
 ##### Install code
-Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x ship```, and you're done. For a more detailed installation guide, check out the wiki.
+Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x ship``` and ```sudo chmod +x gdrived```, and you're done. For a more detailed installation guide, check out the wiki.
 
 And you're done! Now that you have installed VirtualShip on your computer, go to the wiki to learn more!
 
@@ -105,7 +100,6 @@ Before you install, you must understand that uninstalling is very, very easy! Th
 rm -r -d /usr/local/Garage
 rm -r -d /usr/local/Warehouse
 ```
-If you want to, you can check ```ship --version``` to see if VirtualShip is still there. It should be gone.
 ### Removing PATH
 After removing the folders, be sure to modify the PATH variable so it won't include two missing folders. To do this, edit your ```/etc/paths``` file:
 ```
