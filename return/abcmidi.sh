@@ -12,8 +12,8 @@ un_abcmidi () {
                 echo -e "\033[91;1;4mError: abcmidi not installed. Try running ship order abcmidi..."
                 exit
         fi
-
-        rm -rf -d /usr/local/Garage/abcmidi-2020.12.10
+        version=`cat abcmidi_version`
+        rm -rf -d "/usr/local/Garage/abcmidi-$version"
         rm -rf /usr/local/Garage/bin/abc2abc
         rm -rf /usr/local/Garage/bin/abc2midi
         rm -rf /usr/local/Garage/bin/abcmatch
