@@ -93,7 +93,7 @@ then
 		echo "Please describe the product below:"
 		echo ""
 		read description
-		gh issue create --label request --title "Request for $2 stock" --body "$description" --repo https://github.com/VirtualShip/Core
+		gh issue create --label enhancement --title "Request for $2 stock" --body "$description" --repo https://github.com/VirtualShip/Core
 		echo "Backorder created!"
 	fi
 else
