@@ -95,6 +95,7 @@ then
 		read description
 		gh issue create --label request --title "Request for $2 stock" --body "$description" --repo https://github.com/VirtualShip/Core
 		echo "Backorder created!"
+	fi
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
