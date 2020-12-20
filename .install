@@ -28,7 +28,6 @@ install_ship() {
 }
 
 wait_for_user
-git --version
 install_ship
 echo -e "\033[92;1;4mVirtualShip successfully installed! \033[0m"
 
