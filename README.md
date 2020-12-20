@@ -63,8 +63,8 @@ You can also manually install VirtualShip, if the above method does not work for
 ##### Dependencies
 First, we, of course, have to install all the dependencies for VirtualShip. At the time of this writing, VirtualShip is still in alpha mode, so these packages are not yet supported. Below is a quick list of the dependencies you should install:
 * curl
-* git
-As of the current release, python3 and gdown dependencies have been removed. Curl comes preinstalled with Mac OS, and git can be installed either by using git for the first time, or by installing Xcode Command Line Tools.
+* gh
+As of the current release, python3 and gdown dependencies have been removed. Curl comes preinstalled with Mac OS, and gh can be installed very easily (without compiling). Download it from the official source: https://github.com/cli/cli/releases. Don't forget to add the download to your $PATH variable!
 
 ##### Create Folders
 Navigate or cd to the ```/usr/local``` directory, and add the ```Warehouse``` and ```Garage``` folders. In terminal, run the following:
