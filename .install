@@ -23,6 +23,7 @@ install_ship() {
   unzip Core-1.1.0-beta
   sudo mv /usr/local/Warehouse/Core-1.1.0-beta/* /usr/local/Warehouse
   sudo rm -rf -d Core-1.1.0-beta
+  sudo rm -rf Core-1.1.0-beta.zip
   sudo chmod +x bin/ship
   sudo chmod +x bin/gdrived
   sudo chmod +x bin/gh
