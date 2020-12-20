@@ -31,8 +31,8 @@ maintain () {
 	echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
 	sleep 2
 
-	chmod +x ship
-	chmod +x gdrived
+	chmod +x bin/ship
+	chmod +x bin/gdrived
 	
 	echo -e "\033[92;1;4m🏡 Package received! VirtualShip succesfully refurbished. \033[0m"
 	sleep 2
