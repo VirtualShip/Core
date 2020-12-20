@@ -13,7 +13,6 @@ maintain () {
 	rm -rf -d return
 	rm -rf README.md
 	rm -rf LICENSE
-	rm -rf -d bin
 	mv /usr/local/Warehouse/refurbish/maintain.sh /usr/local/Warehouse/maintain.sh
 	rm -rf -d refurbish
  	
@@ -21,7 +20,7 @@ maintain () {
 	sleep 1
 
 	gh repo clone VirtualShip/Core
-
+	rm -rf -d bin
 	echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 	sleep 1
 	
