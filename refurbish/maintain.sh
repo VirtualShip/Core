@@ -19,7 +19,7 @@ maintain () {
 	echo -e "\033[33;1;4m🏭 Package arrived at factory... \033[0m"
 	sleep 1
 
-	git clone https://github.com/VirtualShip/Core
+	gh repo clone VirtualShip/Core
 
 	echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 	sleep 1
