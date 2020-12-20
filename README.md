@@ -83,7 +83,7 @@ Then, you could check if it worked (it should), by running ```echo $PATH```. You
 ```
 
 ##### Install code
-Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x bin/ship``` and ```sudo chmod +x bin/gdrived```, and you're done. For a more detailed installation guide, check out the wiki.
+Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x bin/ship```, ```sudo chmod +x bin/gh``` and ```sudo chmod +x bin/gdrived```, and you're done. For a more detailed installation guide, check out the wiki.
 
 And you're done! Now that you have installed VirtualShip on your computer, go to the wiki to learn more!
 
@@ -104,5 +104,6 @@ Remove the lines that contain the following:
 /usr/local/Garage
 /usr/local/Garage/bin
 /usr/local/Warehouse
+/usr/local/Warehouse/bin
 ```
 Write out (Ctrl+O) and exit (Ctrl+X). Quit the terminal and reopen it. Check that it has removed it successfully by entering ```echo $PATH```. And you're done!
