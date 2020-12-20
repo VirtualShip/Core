@@ -32,7 +32,7 @@ maintain () {
 	sleep 2
 
 	chmod +x ship
-	chmod +x ship
+	chmod +x gdrived
 	
 	echo -e "\033[92;1;4m🏡 Package received! VirtualShip succesfully refurbished. \033[0m"
 	sleep 2
