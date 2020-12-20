@@ -13,6 +13,7 @@ maintain () {
 	rm -rf -d return
 	rm -rf README.md
 	rm -rf LICENSE
+	rm -rf -d bin
 	mv /usr/local/Warehouse/refurbish/maintain.sh /usr/local/Warehouse/maintain.sh
 	rm -rf -d refurbish
  	
