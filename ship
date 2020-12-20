@@ -84,6 +84,17 @@ then
 	else
 		echo "Error: product not in stock"
 	fi
+elif [ "$1" == "backorder" ];
+then
+	if [ "$2" == "" ];
+	then
+		echo -e "\033[91;1;4mError: Backorder not understood \033[0m"
+	else
+		echo "Please describe the product below:"
+		echo ""
+		read description
+		gh issue create --label request --title "Request for $2 stock" --body "$description" --repo https://github.com/VirtualShip/Core
+		echo "Backorder created!"
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
