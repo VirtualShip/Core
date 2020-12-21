@@ -20,7 +20,7 @@ install_ship() {
   export PATH="/usr/local/Warehouse:/usr/local/Warehouse/bin:/usr/local/Garage:/usr/local/Garage/bin:$PATH"
   cd /usr/local/Warehouse
   sudo curl -LJO https://github.com/VirtualShip/Core/archive/v1.1.5-beta.zip
-  unzip Core-1.1.4-beta
+  unzip Core-1.1.5-beta
   sudo mv /usr/local/Warehouse/Core-1.1.5-beta/* /usr/local/Warehouse
   sudo rm -rf -d Core-1.1.5-beta
   sudo rm -rf Core-1.1.5-beta.zip
