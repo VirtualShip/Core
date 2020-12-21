@@ -32,6 +32,9 @@ then
 	elif [ "$2" == "abcmidi" ];
 	then
 		abcmidi_install
+	elif [ "$2" == "ack" ];
+	then
+		ack_install
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		echo "Try refurbishing (maintaining, updating) VirtualShip."
@@ -61,6 +64,9 @@ then
 	elif [ "$2" == "abcmidi" ];
 	then
 		abcmidi_update
+	elif [ "$2" == "ack" ];
+	then
+		ack_update
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		fi
@@ -81,6 +87,9 @@ then
 	elif [ "$2" == "abcmidi" ];
 	then
 		un_abcmidi
+	elif [ "$2" == "ack" ];
+	then
+		un_ack
 	else
 		echo "Error: product not in stock"
 	fi
