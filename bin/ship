@@ -1,40 +1,25 @@
 #!/bin/bash
 for FILE in /usr/local/Warehouse/stock/*; 
 do
-	source $FILE
+	chmod +x $FILE
 done
 
 for FILE in /usr/local/Warehouse/refurbish/*;
 do
-	source $FILE
+	chmod +x $FILE
 done
 
 for FILE in /usr/local/Warehouse/return/*;
 do
-	source $FILE
+	chmod +x $FILE
 done
 
 if [ "$1" == "order" ];
 then
-	if [ "$2" == "a52dec" ];
+	if [ -f "/usr/local/Warehouse/stock/$2_install.sh" ];
 	then
-		a52dec_install
-
-	elif [ "$2" == "aalib" ];
-	then
-		aalib_install
-	elif [ "$2" == "aardvark_shell_utils" ];
-	then
-		aardvark_install
-	elif [ "$2" == "abcm2ps" ];
-	then
-		abcm2ps_install
-	elif [ "$2" == "abcmidi" ];
-	then
-		abcmidi_install
-	elif [ "$2" == "ack" ];
-	then
-		ack_install
+		cd /usr/local/Warehouse/stock
+		./"$2"_install.sh
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		echo "Try refurbishing (maintaining, updating) VirtualShip."
@@ -44,55 +29,28 @@ elif [ "$1" == "refurbish" ];
 then
 	if [ "$2" == "ship" ];
 	then
-		maintain
-		rm -rf /usr/local/Warehouse/maintain.sh
-		rm -rf /usr/local/Warehouse/requirements.txt
-		rm -rf /usr/local/Warehouse/return.sh
-		rm -rf /usr/local/Warehouse/refurbish.sh
-	elif [ "$2" == "a52dec" ];
+		cd /usr/local/Warehouse/refurbish
+		./maintain.sh 
+	elif [ -f "/usr/local/Warehouse/refurbish/$2.sh" ];
 	then
-		a52dec_update
-	elif [ "$2" == "aalib" ];
-	then
-		aalib_update
-	elif [ "$2" == "aardvark_shell_utils" ];
-	then
-		aardvark_update
-	elif [ "$2" == "abcm2ps" ];
-	then
-		abcm2ps_update
-	elif [ "$2" == "abcmidi" ];
-	then
-		abcmidi_update
-	elif [ "$2" == "ack" ];
-	then
-		ack_update
+		cd /usr/local/Warehouse/refurbish
+		./"$2".sh 
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
-		fi
+		echo "Try refurbishing (maintaining, updating) VirtualShip."
+	fi
+
 elif [ "$1" == "return" ];
 then
-	if [ "$2" == "a52dec" ];
+	if [ -f "/usr/local/Warehouse/return/$2.sh" ];
 	then
-		un_a52dec
-	elif [ "$2" == "aalib" ];
-	then
-		un_aalib
-	elif [ "$2" == "aardvark_shell_utils" ];
-	then
-		un_aardvark
-	elif [ "$2" == "abcm2ps" ];
-	then
-		un_abcm2ps
-	elif [ "$2" == "abcmidi" ];
-	then
-		un_abcmidi
-	elif [ "$2" == "ack" ];
-	then
-		un_ack
+		cd /usr/local/Warehouse/return
+		./"$2".sh 
 	else
-		echo "Error: product not in stock"
+		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
+		echo "Try refurbishing (maintaining, updating) VirtualShip."
 	fi
+
 elif [ "$1" == "backorder" ];
 then
 	if [ "$2" == "" ];
