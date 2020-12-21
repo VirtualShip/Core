@@ -9,7 +9,7 @@ un_abcmidi () {
                 echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
                 sleep 1
         else
-                echo -e "\033[91;1;4mError: abcmidi not installed. Try running ship order abcmidi..."
+                echo -e "\033[91;1;4mError: abcmidi not installed. Try running ship order abcmidi... \033[0m"
                 exit
         fi
         version=`cat abcmidi_version`
