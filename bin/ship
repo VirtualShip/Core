@@ -32,6 +32,7 @@ then
 		cd /usr/local/Warehouse/refurbish
 		./maintain.sh 
 		rm /usr/local/Warehouse/maintain.sh
+		sudo chmod -R 777 /usr/local/Warehouse
 	elif [ -f "/usr/local/Warehouse/refurbish/$2.sh" ];
 	then
 		cd /usr/local/Warehouse/refurbish
