@@ -33,6 +33,8 @@ then
 		./maintain.sh 
 		rm /usr/local/Warehouse/maintain.sh
 		sudo chmod -R 777 /usr/local/Warehouse
+		echo -e "\033[92;1;4m🏡 Package received! VirtualShip succesfully refurbished. \033[0m"
+		sleep 2
 	elif [ -f "/usr/local/Warehouse/refurbish/$2.sh" ];
 	then
 		cd /usr/local/Warehouse/refurbish
