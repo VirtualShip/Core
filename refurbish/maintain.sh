@@ -11,6 +11,7 @@ maintain () {
 	rm -rf gdrived
 	rm -rf -d stock
 	rm -rf -d return
+	rm -rf -d man
 	rm -rf README.md
 	rm -rf LICENSE
 	mv /usr/local/Warehouse/refurbish/maintain.sh /usr/local/Warehouse/maintain.sh
