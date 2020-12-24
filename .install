@@ -19,11 +19,11 @@ install_ship() {
   sudo chmod -R 777 Garage
   export PATH="/usr/local/Warehouse:/usr/local/Warehouse/bin:/usr/local/Garage:/usr/local/Garage/bin:$PATH"
   cd /usr/local/Warehouse
-  sudo curl -LJO https://github.com/VirtualShip/Core/archive/v1.2.4-beta.zip
-  unzip Core-1.2.4-beta
-  sudo mv /usr/local/Warehouse/Core-1.2.4-beta/* /usr/local/Warehouse
-  sudo rm -rf -d Core-1.2.4-beta
-  sudo rm -rf Core-1.2.4-beta.zip
+  sudo curl -LJO https://github.com/VirtualShip/Core/archive/v1.2.6-beta.zip
+  unzip Core-1.2.6-beta
+  sudo mv /usr/local/Warehouse/Core-1.2.6-beta/* /usr/local/Warehouse
+  sudo rm -rf -d Core-1.2.6-beta
+  sudo rm -rf Core-1.2.6-beta.zip
   sudo chmod +x bin/ship
   sudo chmod +x bin/gdrived
   sudo chmod +x bin/gh
