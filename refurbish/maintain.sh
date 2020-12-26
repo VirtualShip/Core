@@ -35,6 +35,7 @@ maintain () {
 	chmod +x bin/ship
 	chmod +x bin/gdrived
 	chmod +x bin/gh
+	chmod +x bin/sha
 
 	return
 }
