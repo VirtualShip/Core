@@ -34,11 +34,12 @@ ship return ffmpeg
 
 Simple commands that are easily remembered! No more looking up how to install a package.
 ### Security
-VirtualShip is secure. As mentioned before, VirtualShip only operates within 3 folders, all located within the /usr/local directory. _Even if some virus, somehow infiltrates into your system, your computer will not be harmed_. Here are the main security points:
+VirtualShip is secure. As mentioned before, VirtualShip only operates within 2 folders, all located within the /usr/local directory. _Even if some virus, somehow infiltrates into your system, your computer will not be harmed_. Here are the main security points:
 
 * All products and stocks are personally inspected by VirtualShip
 * VirtualShip only operates within the Warehouse and the Garage enviornments in the /usr/local directory
 * VirtualShip will _not_ give your password away to large Makefiles: no more sudo!
+* All downloaded files will be checked with the SHA-512 algorithm
 
 You can trust VirtualShip to keep your computer secure.
 
@@ -83,7 +84,7 @@ Then, you could check if it worked (it should), by running ```echo $PATH```. You
 ```
 
 ##### Install code
-Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x bin/ship```, ```sudo chmod +x bin/gh``` and ```sudo chmod +x bin/gdrived```, and you're done. For a more detailed installation guide, check out the wiki.
+Finally, you can install the code required for VirtualShip to run smoothly. _Install both the code on the main and self branch of this repository_. You can do it through the Finder and Github GUI, or you can run it through the terminal. Simply download all of the code to two seperate folders, move the contents of the folders to the /usr/local/Warehouse directory, run ```sudo chmod +x bin/ship```, ```sudo chmod +x bin/gh```, ```sudo chmod +x bin/sha```, and ```sudo chmod +x bin/gdrived```, and you're done. For a more detailed installation guide, check out the wiki.
 
 And you're done! Now that you have installed VirtualShip on your computer, go to the wiki to learn more!
 
