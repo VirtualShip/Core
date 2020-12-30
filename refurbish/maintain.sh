@@ -36,6 +36,7 @@ maintain () {
 	chmod +x bin/gdrived
 	chmod +x bin/gh
 	chmod +x bin/sha
+	chmod +x bin/stockgen
 
 	return
 }
