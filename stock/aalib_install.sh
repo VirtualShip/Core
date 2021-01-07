@@ -1,11 +1,11 @@
 aalib_install () {
-	sha="7cbe0f06ab7cbdb6ad7881cdfd26a3e52ca49b2410abf97abb0c382dcde3b17a670b8acb4a1e5094f6c010f6457c6730fdd50d76a077886979a8219e138bc30b  aalib.zip"
+	sha="cbf40c1f0e56b855379d0d8fcc13f3655548e2e368684618e8a18d0a740fa54a44780a1a54b458a035867e34c8710cc508c34763e0482e25e5c766b9d81aa8b1  aalib.zip"
 	cd /usr/local/Garage
 	echo -e "\033[34;1;4m🖥️  Processing order: aalib \033[0m"
 	sleep 2
 	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
 	sleep 2
-	gdrived 1CCJFF1ZRC25WxbYZWdXlp7ZBNt7-0BJS aalib.zip
+	gdrived 1fG7laWAB2k9GJTM4t-1lLCnIQ8rztQk- aalib.zip
 	result=`sha -c aalib.zip "$sha"`
 	if [ "$result" == "Incorrect" ];
 	then

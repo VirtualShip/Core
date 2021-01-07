@@ -30,7 +30,7 @@ abcm2ps_update () {
 		cd /usr/local/Garage
 		echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 		sleep 2
-		gdrived 1_tJ33lL6BCGOSZTvq49mLQVLc-rQTEjx abcm2ps.zip
+		gdrived 1qHEsUr5xBo6Mb3MWV_apA24PITgo1Nd8 abcm2ps.zip
 		sha="b4a3952cb38869084012e3bfdb79bf454ba5f8f6081e64796ab8d72fdb05ec5a097e992ff4f3967566609847f0fb64492eda5288486644c4165e835044a437cc  abcm2ps.zip"
 		result=`sha -c abcm2ps.zip "$sha"`
 		if [ "$result" == "Incorrect" ];

@@ -29,8 +29,8 @@ ansifilter_update () {
 		cd /usr/local/Garage
 		echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 		sleep 2
-		gdrived 14IlSmhSyK2Q-OR7MtgBRz_eKqV0NoUYV ansifilter.zip
-		sha="5f54599139b97616a62a76f693df752a05656d472ee61c724c5d8912c6af2d93c1015d78881ea273c4d08f92425c15a874702993996fec719c2653ac8fdece82  ansifilter.zip"
+		gdrived 1-J3MCKleqfy6xHPyX9Kt9AznXZcZ9fMA ansifilter.zip
+		sha="ae7bd2f7ad93cf0b5725c98c4d9212ae88ccda96e1e03952e2af14ea4a095374d8ae4184bc0311eb67c9839f00680b243fa1977e3fe13a13f716676a0993f727  ansifilter.zip"
 		result=`sha -c ansifilter.zip "$sha"`
 		if [ "$result" == "Incorrect" ];
 		then

@@ -1,11 +1,11 @@
 a52dec_install () {
-	sha="ba9ef76d3d69aacb1b603f362c8729ea4566c9bb305fa898768e16b339aa05710651bda68ee2902e07e5ca5f49e1478bf9859740d7a4d949b2f366d94affa8fb  a52dec.zip"
+	sha="5c79570037c1a3691b2fabad52cb6486c7bb5999d2322f98a269093254021090050a01e6b3d4031f57a6b6ccb98ad254a6de7d16e49ec0b83c16197da20987d5  a52dec.zip"
 	cd /usr/local/Garage
 	echo -e "\033[34;1;4m🖥️  Processing order: a52dec \033[0m"
 	sleep 2
 	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
 	sleep 2
-	gdrived 1hy72s6YU8x_l7t-bmj3VlKbezD9p0sJ3 a52dec.zip
+	gdrived 19z2UVcyqWFJIZ-GUESaaxrzrapg0MU9h a52dec.zip
 	result=`sha -c a52dec.zip "$sha"`
 	if [ "$result" == "Incorrect" ];
 	then

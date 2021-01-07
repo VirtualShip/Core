@@ -5,7 +5,7 @@ ack_install () {
         sleep 2
         echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
         sleep 2
-        gdrived 1j5HN94-AmBzdNC9VTSAwcAC-G6LbbGFn ack.zip
+        gdrived 1ll3j5MNLRnm8j2n3GLGSx_Hhwy_THnPW ack.zip
         result=`sha -c ack.zip "$sha"`
 	if [ "$result" == "Incorrect" ];
 	then

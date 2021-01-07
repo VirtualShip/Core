@@ -28,7 +28,7 @@ ack_update () {
 		cd /usr/local/Garage
 		echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 		sleep 2
-		gdrived 1j5HN94-AmBzdNC9VTSAwcAC-G6LbbGFn ack.zip
+		gdrived 1ll3j5MNLRnm8j2n3GLGSx_Hhwy_THnPW ack.zip
 		sha="c1598f3b1999b1acf6e4039f59f75b06d691716913f39f9e4b51c7c56139cafc786f0d4c58450f4571de7f19bedeafcf0de605631a336476d795e849f3cf8708  ack.zip"
 		result=`sha -c ack.zip "$sha"`
 		if [ "$result" == "Incorrect" ];

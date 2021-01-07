@@ -5,7 +5,7 @@ abcm2ps_install () {
 	sleep 2
 	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
 	sleep 2
-	gdrived 1_tJ33lL6BCGOSZTvq49mLQVLc-rQTEjx abcm2ps.zip
+	gdrived 1qHEsUr5xBo6Mb3MWV_apA24PITgo1Nd8 abcm2ps.zip
 	result=`sha -c abcm2ps.zip "$sha"`
 	if [ "$result" == "Incorrect" ];
 	then

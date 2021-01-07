@@ -28,8 +28,8 @@ akamai_update () {
 		cd /usr/local/Garage
 		echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 		sleep 2
-		gdrived 1JfsobQpuxmA0LZND4eTAdkl0Jr11I_uN akamai.zip
-		sha="193d209aad072cd48c34ffd774ac788a5b6cb1227ca897606e5342192a6f1ae22d40e485c1e66b61ae736f749eb9d849f082a16472aa9a262ed653533826888a  akamai.zip"
+		gdrived 1sG9gz4wuNat5_r8IhhLywfQGTQhnjr2e akamai.zip
+		sha="55fa8c8264d0b09590b6ed3910645bb3040d8d3ee788fa7c5ceba7ee2ca5ad6b2befa4cde7474aae094b3c626358df26d457097d52d55db0990c9c8ab3ffc6fb  akamai.zip"
 		result=`sha -c akamai.zip "$sha"`
 		if [ "$result" == "Incorrect" ];
 		then

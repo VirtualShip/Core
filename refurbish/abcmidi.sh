@@ -42,8 +42,8 @@ abcmidi_update () {
 		cd /usr/local/Garage
 		echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 		sleep 2
-		gdrived 17jHSgzoNpkzUP8q63fuGKfvOFl9K1un8 abcmidi.zip
-		sha="5e6d05acb40b8cbe523d86a3973a558ebe98907444854a41b8496273d32b5362136a7dc68efc4add4532cbf2f21bdf5130a61bc3819cfcd6aaae121e8aa696b2  abcmidi.zip"
+		gdrived 1UUxzeWotJVLpNNa_vg1kwY7jAzHKHngJ abcmidi.zip
+		sha="490261d158e3f387287b25f726c6ebc7cad5aa66f4a2e9770f7f698d185191082108dc7f2a23a943cdbc27f7c2e86d613e17e1d03587f675c5e577be70ca23fa  abcmidi.zip"
 		result=`sha -c abcmidi.zip "$sha"`
 		if [ "$result" == "Incorrect" ];
 		then

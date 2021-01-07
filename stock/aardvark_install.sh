@@ -1,11 +1,11 @@
 aardvark_install () {
-	sha="3a0c94f7c6945105d9da18f164cd5d212b01e138ad8ecb206781d3287409cf49290efb074dae831bfedbd9cbba3eaf26a9ce906ec82fba98a716ce27293e731e  aardvark.zip"
+	sha="ab355861199a2a04e4e4325afb7ff7008d090198940e10196dd99937be6dcd7b7fbd916a8ab3dcf0a4c5418739b82474f05ba58dc2ae1ba89d38218c2f02585d  aardvark.zip"
 	cd /usr/local/Garage
 	echo -e "\033[34;1;4m🖥️  Processing order: aardvark \033[0m"
 	sleep 2
 	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
 	sleep 2
-	gdrived 1VpZZe5jjtzE42MlUZPG2jD1U3zbDdom8 aardvark.zip
+	gdrived 1M9e-LmCY46AiHuB0_ID-01i-8sequFRm aardvark.zip
 	result=`sha -c aardvark.zip "$sha"`
 	if [ "$result" == "Incorrect" ];
 	then
