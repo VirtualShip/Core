@@ -43,7 +43,7 @@ automake_update () {
 		cd /usr/local/Garage
 		echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
 		sleep 2
-		gdrived 1ErbtQQBngC6Dxsenc9GrZS7_7KRf4HBs automake.zip
+		gdrived 1OAF4m26F2nHjatMd9bmHSDeTFHSUvtw6 automake.zip
 		sha="cf52a76df5dbd5254a938258fdb1d81403b9eda32732699a3b4b7953444bd0bc0583f765ee1a1e12142deb7b5b28bfe6c57188769f1b0aec0de6e67c8c66c5b6  automake.zip"
 		result=`sha -c automake.zip "$sha"`
 		if [ "$result" == "Incorrect" ];
