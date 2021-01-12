@@ -5,7 +5,7 @@ automake_install () {
         sleep 2
         echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
         sleep 2
-        gdrived 1ErbtQQBngC6Dxsenc9GrZS7_7KRf4HBs automake.zip
+        gdrived 1OAF4m26F2nHjatMd9bmHSDeTFHSUvtw6 automake.zip
         result=`sha -c automake.zip "$sha"`
 	if [ "$result" == "Incorrect" ];
 	then
