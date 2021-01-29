@@ -28,6 +28,7 @@ install_ship() {
   sudo chmod +x bin/gdrived
   sudo chmod +x bin/gh
   sudo chmod +x bin/stockgen
+  sudo chmod +x bin/sha
 }
 
 wait_for_user
