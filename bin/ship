@@ -83,6 +83,16 @@ then
 		echo "Report sent!"
 	fi
 	
+	elif [ "$1" == "search" ];
+then
+	if [ "$2" == "all" ];
+	then
+		cd /usr/local/Warehouse/return
+		ls -1 | sed -e 's/\..*$//'
+	else
+		echo -e "\033[91;1;4mError: Search not understood \033[0m"	
+	fi
+	
 else
 	echo -e "\033[91;1;4mError: Command not understood \033[0m"
 	fi
