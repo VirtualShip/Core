@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd ~/Downloads
+version=`curl https://raw.githubusercontent.com/VirtualShip/Core/main/VERSION`
+
 wait_for_user() {
   echo "Please note that you will need sudo access to install VirtualShip."
   sleep 2
@@ -19,11 +22,11 @@ install_ship() {
   sudo chmod -R 777 Garage
   export PATH="/usr/local/Warehouse:/usr/local/Warehouse/bin:/usr/local/Garage:/usr/local/Garage/bin:$PATH"
   cd /usr/local/Warehouse
-  sudo curl -LJO https://github.com/VirtualShip/Core/archive/v1.6.2-beta.zip
-  unzip Core-1.6.2-beta
-  sudo mv /usr/local/Warehouse/Core-1.6.2-beta/* /usr/local/Warehouse
-  sudo rm -rf -d Core-1.6.2-beta
-  sudo rm -rf Core-1.6.2-beta.zip
+  sudo curl -LJO https://github.com/VirtualShip/Core/archive/v"$version"-beta.zip
+  unzip Core-"$version"-beta
+  sudo mv /usr/local/Warehouse/Core-"$version"-beta/* /usr/local/Warehouse
+  sudo rm -rf -d Core-"$version"-beta
+  sudo rm -rf Core-"$version"-beta.zip
   sudo chmod +x bin/ship
   sudo chmod +x bin/gdrived
   sudo chmod +x bin/gh
