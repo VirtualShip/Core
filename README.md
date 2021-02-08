@@ -15,7 +15,7 @@ VirtualShip is fast. Take the package a52dec, as an example (currently in beta s
 Homebrew speed: 1 minute
 VirtualShip speed: 20 seconds
 
-VirtualShip is actually 3 times faster than its counterparts!
+VirtualShip is actually 3 times faster than its counterparts! This is because all of our instructions for installing products are on the cloud: a GitHub repository (VirtualShip/Products). This means updating speeds and installing speeds stay exactly the same!
 ### Simplicity
 VirtualShip is simple. Most commands are only 3 words, with easily human-readable commands:
 ```
