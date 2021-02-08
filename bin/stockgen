@@ -1,0 +1,153 @@
+#!/bin/bash
+
+echo "Enter the Google Drive ID"
+
+read driveid
+
+echo "Enter the sha hash"
+
+read hash
+
+echo "Enter the version of the product"
+
+read current
+
+echo "Generating stock files...."
+echo "Generating order file...."
+
+cat > /usr/local/Warehouse/stock/"$1"_install.sh << EOF
+$1_install () {
+	sha="$hash"
+	cd /usr/local/Garage
+	echo -e "\033[34;1;4m🖥️  Processing order: $1 \033[0m"
+	sleep 2
+	echo -e "\033[93;1;4m🏗  Retrieving components of order \033[0m"
+	sleep 2
+	gdrived $driveid $1.zip
+	result=\`sha -c $1.zip "\$sha"\`
+	if [ "\$result" == "Incorrect" ];
+	then
+		echo -e "\033[91;1;4mError: Security problem \033[0m"
+		echo "The downloaded file has been compromised. It has been deleted."
+		echo "Your system has not been harmed."
+		echo "Try again later."
+		rm -f $1.zip
+		rm -f cookie
+		return
+	fi
+	echo -e "\033[33;1;4m📦 Packaging components of order... \033[0m"
+        sleep 2
+	unzip $1.zip
+	rm -rf -d __MACOSX
+	rm $1.zip
+	rm cookie
+	echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
+        sleep 2
+        ./test
+        rm test
+}
+
+$1_install
+EOF
+
+sleep 2
+
+echo "Generating return file...."
+
+cat > /usr/local/Warehouse/return/"$1".sh << EOF
+un_$1 () {
+	echo -e "\033[34;1;4m🖥️  Processing return: $1 \033[0m"
+        sleep 1
+
+        cd /usr/local/Garage
+
+        if [ -f "/usr/local/Garage/$1_version" ];
+        then
+                echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
+                sleep 1
+        else
+                echo -e "\033[91;1;4mError: $1 not installed. Try running ship order $1... \033[0m"
+                exit
+        fi
+        version=\`cat $1_version\`
+	
+
+	# removed files here
+
+	echo -e "\033[92;1;4m🏭 Package arrived at store! $1 successfully returned. \033[0m"
+}
+
+un_$1
+EOF
+
+sleep 2
+
+echo "Generating refurbish file...."
+
+cat > /usr/local/Warehouse/refurbish/$1.sh << EOF
+$1_update () {
+	echo -e "\033[34;1;4m🖥️  Processing refurbish: $1 \033[0m"
+	sleep 1
+
+	cd /usr/local/Garage
+	
+	if [ -f "/usr/local/Garage/$1_version" ];
+	then
+		echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
+		sleep 1
+	else
+		echo -e "\033[91;1;4mError: $1 not installed. Try running ship order $1... \033[0m"
+		exit
+	fi
+	version=\`cat /usr/local/Garage/$1_version\`
+	if [ "\$version" == $current ];
+	then
+		echo -e "\033[92;1;4m🍱 You already have the latest version! \033[0m"
+		exit
+	else
+	
+
+	# removed files here
+	
+	echo -e "\033[33;1;4m🏭 Package arrived at factory... \033[0m"
+	sleep 1
+	cd /usr/local/Garage
+	echo -e "\033[93;1;4m🚧 Starting refurbish... \033[0m"
+	sleep 2
+	gdrived $driveid $1.zip
+	sha="$hash"
+	result=\`sha -c $1.zip "\$sha"\`
+	if [ "\$result" == "Incorrect" ];
+	then
+		echo -e "\033[91;1;4mError: Security problem \033[0m"
+		echo "The downloaded file has been compromised. It has been deleted."
+		echo "Your system has not been harmed."
+		echo "Try again later."
+		rm -f $1.zip
+		rm -f cookie
+		return
+	fi
+	echo -e "\033[93;1;4m🚧 Refurbish finished... \033[0m"
+	sleep 2
+	unzip $1.zip
+	rm -r -d __MACOSX
+	rm $1.zip
+	rm cookie
+	echo -e "\033[31;1;4m🚚 Shipping package... \033[0m"
+	sleep 2
+	./test
+	rm test
+	echo -e "\033[92;1;4m🏡 Package received! $1 succesfully refurbished. \033[0m"
+}
+
+
+$1_update
+EOF
+
+echo "Success! All necessary files have been generated. To test, run:"
+echo "ship order $1"
+echo "ship refurbish $1"
+echo "ship return $1"
+
+
+

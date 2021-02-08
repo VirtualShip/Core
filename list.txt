@@ -1,0 +1,15 @@
+a52dec
+aalib
+aardvark
+abcm2ps
+abcmidi
+ack
+acme
+aescrypt
+akamai
+ansifilter
+automake
+bash-completion
+bbedit
+binutils
+bison

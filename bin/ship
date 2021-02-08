@@ -1,0 +1,104 @@
+#!/bin/bash
+
+remoteukey=`curl https://raw.githubusercontent.com/VirtualShip/Core/main/changekey`
+
+localukey=`cat /usr/local/Warehouse/changekey`
+
+if [ "$remoteukey" != "$localukey" ];
+then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Products/main/refurbish/maintain.sh)"
+fi
+	
+existcheck=`(($(curl --silent -I https://raw.githubusercontent.com/VirtualShip/Products/main/stock/"$2"_install.sh \
+    | grep -E "^HTTP" \
+    | awk -F " " '{print $2}') == 200)) \
+    && echo "file exists"`
+
+installfunc () {
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Products/main/stock/"$1"_install.sh)"
+}
+
+returnfunc () {
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Products/main/return/"$1".sh)"
+}
+
+refurbishfunc () {
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Products/main/refurbish/"$1".sh)"
+}
+
+if [ "$1" == "order" ];
+then
+	if [ "$existcheck" == "file exists" ];
+	then
+		installfunc "$2"
+		
+	else
+		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
+		echo "Try refurbishing (maintaining, updating) VirtualShip."
+	fi
+		
+elif [ "$1" == "refurbish" ];
+then
+	if [ "$existcheck" == "file exists" ];
+	then
+		refurbishfunc "$2"
+	else
+		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
+		echo "Try refurbishing (maintaining, updating) VirtualShip."
+	fi
+
+elif [ "$1" == "return" ];
+then
+	if [ "$existcheck" == "file exists" ];
+	then
+		returnfunc "$2"
+	else
+		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
+		echo "Try refurbishing (maintaining, updating) VirtualShip."
+	fi
+
+elif [ "$1" == "backorder" ];
+then
+	if [ "$2" == "" ];
+	then
+		echo -e "\033[91;1;4mError: Backorder not understood \033[0m"
+	else
+		echo "Please describe the product below:"
+		echo ""
+		read description
+		gh issue create --label enhancement --title "Request for $2 stock" --body "$description" --repo https://github.com/VirtualShip/Core
+		echo "Backorder issued!"
+	fi
+	
+elif [ "$1" == "report" ];
+then
+	if [ "$2" == "" ];
+	then
+		echo -e "\033[91;1;4mError: Report not understood \033[0m"
+	else
+		echo "Reporting an error for the product $2 ..."
+		sleep 1
+		echo "Please describe the error encountered below:"
+		echo ""
+		read description
+		gh issue create --label bug --title "Error ordering $2" --body "$description" --repo https://github.com/VirtualShip/Core
+		echo "Report sent!"
+	fi
+
+elif [ "$1" == "search" ];
+then
+	if [ "$2" == "all" ];
+	then
+		cat /usr/local/Warehouse/list.txt
+	else
+		grep -F "$2" /usr/local/Warehouse/list.txt
+	fi
+	
+else
+	echo -e "\033[91;1;4mError: Command not understood \033[0m"
+	fi
+
+
+
+
+

@@ -1,0 +1,16 @@
+if [ "$1" == "-c" ];
+then
+	check=`shasum -a 512 "$2"`
+	if [ "$check" == "$3" ];
+	then
+		echo "Correct"
+	else
+		echo "Incorrect"
+	fi
+elif [ "$1" == "-f" ];
+then
+	check=`shasum -a 512 "$2"`
+	echo "$check"
+else
+	echo "Error: not understood"
+fi
