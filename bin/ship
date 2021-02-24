@@ -72,17 +72,28 @@ then
 	
 elif [ "$1" == "report" ];
 then
-	if [ "$2" == "" ];
+	if [ "$2" == "-p" ];
 	then
-		echo -e "\033[91;1;4mError: Report not understood \033[0m"
-	else
-		echo "Reporting an error for the product $2 ..."
+		echo "Reporting an error for the product $3 ..."
 		sleep 1
 		echo "Please describe the error encountered below:"
 		echo ""
 		read description
 		gh issue create --label bug --title "Error ordering $2" --body "$description" --repo https://github.com/VirtualShip/Core
 		echo "Report sent!"
+	elif [ "$2" == "-i" ];
+	then
+		echo "Reporting an issue regarding VirtualShip Core..."
+		sleep 1
+		echo "Summarize your issue in about three to five words:"
+		echo ""
+		read title
+		echo "Please describe the issue in more detail below:"
+		echo ""
+		read description
+		gh issue create --label bug --title "$title" --body "$description" --repo https://github.com/VirtualShip.Core
+	else
+		echo -e "\033[91;1;4mError: Report not understood \033[0m"
 	fi
 
 elif [ "$1" == "search" ];
