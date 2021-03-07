@@ -15,7 +15,7 @@ read current
 echo "Generating stock files...."
 echo "Generating order file...."
 
-cat > /usr/local/Warehouse/stock/"$1"_install.sh << EOF
+cat > /usr/local/Warehouse/working/stock/"$1"_install.sh << EOF
 $1_install () {
 	sha="$hash"
 	cd /usr/local/Garage
@@ -54,7 +54,7 @@ sleep 2
 
 echo "Generating return file...."
 
-cat > /usr/local/Warehouse/return/"$1".sh << EOF
+cat > /usr/local/Warehouse/working/return/"$1".sh << EOF
 un_$1 () {
 	echo -e "\033[34;1;4m🖥️  Processing return: $1 \033[0m"
         sleep 1
@@ -84,7 +84,7 @@ sleep 2
 
 echo "Generating refurbish file...."
 
-cat > /usr/local/Warehouse/refurbish/$1.sh << EOF
+cat > /usr/local/Warehouse/working/refurbish/$1.sh << EOF
 $1_update () {
 	echo -e "\033[34;1;4m🖥️  Processing refurbish: $1 \033[0m"
 	sleep 1
