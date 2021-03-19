@@ -91,7 +91,7 @@ then
 		echo "Please describe the issue in more detail below:"
 		echo ""
 		read description
-		gh issue create --label bug --title "$title" --body "$description" --repo https://github.com/VirtualShip.Core
+		gh issue create --label bug --title "$title" --body "$description" --repo https://github.com/VirtualShip/Core
 	else
 		echo -e "\033[91;1;4mError: Report not understood \033[0m"
 	fi
