@@ -13,3 +13,4 @@ bash-completion
 bbedit
 binutils
 bison
+libpng
