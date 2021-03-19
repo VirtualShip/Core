@@ -79,7 +79,7 @@ then
 		echo "Please describe the error encountered below:"
 		echo ""
 		read description
-		gh issue create --label bug --title "Error ordering $2" --body "$description" --repo https://github.com/VirtualShip/Core
+		gh issue create --label bug --title "Error ordering $3" --body "$description" --repo https://github.com/VirtualShip/Core
 		echo "Report sent!"
 	elif [ "$2" == "-i" ];
 	then
