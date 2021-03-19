@@ -79,19 +79,35 @@ then
 		echo "Please describe the error encountered below:"
 		echo ""
 		read description
-		gh issue create --label bug --title "Error ordering $3" --body "$description" --repo https://github.com/VirtualShip/Core
+		gh issue create --label bug --label product --title "Error ordering $3" --body "$description" --repo https://github.com/VirtualShip/Core
 		echo "Report sent!"
 	elif [ "$2" == "-i" ];
 	then
-		echo "Reporting an issue regarding VirtualShip Core..."
-		sleep 1
-		echo "Summarize your issue in about three to five words:"
-		echo ""
-		read title
-		echo "Please describe the issue in more detail below:"
-		echo ""
-		read description
-		gh issue create --label bug --title "$title" --body "$description" --repo https://github.com/VirtualShip/Core
+		if [ "$3" == "Core" ];
+		then
+			echo "Reporting an issue regarding VirtualShip Core..."
+			sleep 1
+			echo "Summarize your issue in about three to five words:"
+			echo ""
+			read title
+			echo "Please describe the issue in more detail below:"
+			echo ""
+			read description
+			gh issue create --label bug --label core --title "$title" --body "$description" --repo https://github.com/VirtualShip/Core
+		elif [ "$3" == "Auxiliary" ];
+		then
+			echo "Reporting an issue regarding VirtualShip Core..."
+			sleep 1
+			echo "Summarize your issue in about three to five words:"
+			echo ""
+			read title
+			echo "Please describe the issue in more detail below:"
+			echo ""
+			read description
+			gh issue create --label bug --label auxiliary --title "$title" --body "$description" --repo https://github.com/VirtualShip/Core
+		else
+			echo -e "\033[91;1;4mError: Command not understood \033[0m"
+		fi	
 	else
 		echo -e "\033[91;1;4mError: Report not understood \033[0m"
 	fi
