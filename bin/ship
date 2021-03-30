@@ -26,6 +26,11 @@ refurbishfunc () {
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Products/main/refurbish/"$1".sh)"
 }
 
+testfunc () {
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/VirtualShip/Products/main/stock/dev/"$1"_test.sh)"
+}
+
+
 if [ "$1" == "order" ];
 then
 	if [ "$existcheck" == "file exists" ];
@@ -52,6 +57,17 @@ then
 	if [ "$existcheck" == "file exists" ];
 	then
 		returnfunc "$2"
+	else
+		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
+		echo "Try refurbishing (maintaining, updating) VirtualShip."
+	fi
+	
+if [ "$1" == "test" ];
+then
+	if [ "$existcheck" == "file exists" ];
+	then
+		testfunc "$2"
+		
 	else
 		echo -e "\033[91;1;4mError: Product not in stock \033[0m"
 		echo "Try refurbishing (maintaining, updating) VirtualShip."
